@@ -1,29 +1,25 @@
-import React from "react";
+import React, { Component } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-import "./App.scss";
+import './App.scss';
+import TasksList from './components/TasksList';
+import TasksListContextProvider from './contexts/TasksList';
+import TaskForm from './components/TaskForm';
 
-import { GlobalProvider } from "./context/GlobalState";
-
-import Header from "./components/Header";
-import Balance from "./components/Balance";
-import IncomeExpenses from "./components/IncomeExpenses";
-import TransactionList from "./components/TransactionList";
-import AddTransaction from "./components/AddTransaction";
-
-function App() {
-  return (
-    <GlobalProvider>
-      <div className="app">
-        <Header />
-        <div className="app-components">
-          <Balance />
-          <IncomeExpenses />
-          <TransactionList />
-          <AddTransaction />
-        </div>
+class App extends Component {
+  render() {
+    return (
+      <div className='app'>
+        <TasksListContextProvider>
+          <div className='tasks-list-container'>
+            <h2>tasks manager</h2>
+            <TaskForm />
+            <TasksList />
+          </div>
+        </TasksListContextProvider>
       </div>
-    </GlobalProvider>
-  );
+    );
+  }
 }
 
 export default App;

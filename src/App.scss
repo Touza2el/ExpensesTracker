@@ -1,3 +1,4 @@
+// Start General Style
 * {
   margin: 0;
   padding: 0;
@@ -12,151 +13,80 @@ h5,
 h6 {
   text-transform: capitalize;
 }
-ul {
+ul,
+li {
   list-style: none;
+}
+button {
+  background-color: transparent;
+  border: none;
+  text-transform: capitalize;
+  outline: none !important;
 }
 // End General Style
 
-.header-component {
-  padding: 15px 0;
-  h3 {
-    color: #212121;
-    text-align: center;
-  }
-}
-.app-components {
-  margin: auto;
-  padding: 20px;
-  width: 50%;
-  background-color: #eee;
-  border-radius: 5px;
-}
-.balance-component {
-  margin: auto;
-  padding: 10px 0;
-  width: 71%;
-  color: #fefefe;
-  background-color: #209cee;
-  border-radius: 5px;
-  text-align: center;
-}
-.income-expenses-component {
-  width: 71%;
+.app {
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
-  margin: 15px auto;
-  .inc-exp {
-    padding: 10px;
-    width: 46%;
-    color: #212121;
-    background-color: rgb(210, 210, 210);
-    border-radius: 5px;
-    text-align: center;
-    h6 {
-      font-weight: bold;
-    }
-    p {
-      margin: auto;
-      width: 55px;
-      height: 45px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fff;
-      border-radius: 5px;
-    }
-  }
+  justify-content: center;
+  align-items: center;
 }
-.transaction-list-component {
-  margin: auto;
-  padding: 10px 20px;
-  width: 71%;
-  background-color: rgb(210, 210, 210);
-  border-radius: 5px;
-  h4 {
-    margin-bottom: 10px;
+.tasks-list-container {
+  margin-bottom: 200px;
+  padding: 30px;
+  width: 400px;
+  background-color: #169dbe;
+  border-radius: 4px;
+  h2 {
+    margin-bottom: 30px;
+    color: #eee;
     text-align: center;
   }
-  ul {
-    margin: auto;
-    width: 80%;
-    li {
-      margin-bottom: 10px;
-      padding: 5px 8px;
-      background-color: #fff;
-      border-radius: 3px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      cursor: pointer;
-      &:hover {
-        button {
-          opacity: 1;
-        }
-      }
-
-      button {
-        position: absolute;
-        right: -52px;
-        z-index: 0;
-        display: inline-block;
-        padding: 3px 15px;
-        color: #fefefe;
-        background-color: #209cee;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-        opacity: 0;
-        outline: none;
-        transition: background 0.4s ease;
-        &:hover {
-          background-color: #1a84ca;
-        }
-      }
+}
+.tasks-list {
+  height: 140px;
+  overflow-y: scroll;
+}
+.no-tasks {
+  padding: 5px 0;
+  color: #444;
+  background-color: #eee;
+  text-align: center;
+  font-weight: bold;
+}
+.task {
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  display: flex;
+  background-color: #eee;
+  border-radius: 3px;
+  span {
+    flex: 1;
+  }
+  button {
+    margin-left: 10px;
+    i {
+      color: #169dbe;
     }
   }
 }
+.task-form {
+  margin-bottom: 10px;
+  display: flex;
 
-.transaction-component {
-  .green-border {
-    border-right: 5px solid green;
-  }
-  .red-border {
-    border-right: 5px solid red;
-  }
-}
-.add-transaction-component {
-  margin: 15px auto 0 auto;
-  padding: 20px;
-  width: 71%;
-  background-color: rgb(210, 210, 210);
-  border-radius: 5px;
-}
-.add-transaction-form {
   input {
-    display: block;
-    margin-bottom: 20px;
+    flex: 1;
     padding: 5px;
-    width: 100%;
-    border: 1px solid #fff;
+    border: none;
     border-radius: 3px;
     outline: none;
   }
-}
-.add-transaction-btn {
-  padding: 5px 0;
-  text-align: center;
   button {
-    padding: 5px 10px;
+    margin-left: 5px;
+    padding: 0 7px;
     color: #fff;
-    background-color: #209cee;
-    border: none;
-    border-radius: 4px;
-    outline: none;
-    transition: background 0.4s ease;
-    &:hover {
-      background-color: #1a84ca;
-    }
+    background-color: rgb(253, 151, 113);
+    border-radius: 3px;
   }
 }
